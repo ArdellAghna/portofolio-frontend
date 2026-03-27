@@ -70,7 +70,7 @@ const portfolioData = {
         icon: "bx bx-book",
       },
       { label: "Major", value: "Computer Science", icon: "bx bx-code-alt" },
-      { label: "Semester", value: "5", icon: "bx bx-calendar" },
+      { label: "Semester", value: "6", icon: "bx bx-calendar" },
       {
         label: "Focus",
         value: "Data Analytics & AI Engineering",
