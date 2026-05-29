@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         url: "/profile.jpg",
         width: 1200,
         height: 630,
-        alt: "Ardell Aghna Mahendra - Data Analytics & AI Engineer",
+        alt: "Ardell Aghna Mahendra - Data Analytics & Frontend Developer",
       },
     ],
     locale: "id_ID",

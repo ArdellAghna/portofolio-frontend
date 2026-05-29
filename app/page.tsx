@@ -73,7 +73,7 @@ const portfolioData = {
       { label: "Semester", value: "6", icon: "bx bx-calendar" },
       {
         label: "Focus",
-        value: "Data Analytics & AI Engineering",
+        value: "Data Analytics & Frontend Developer",
         icon: "bx bx-brain",
       },
       {
@@ -446,6 +446,30 @@ const portfolioData = {
       techStack: ["C", "Data Structures", "Linked Lists", "Queues"],
       description: "A CLI-based simulated application utilizing foundational data structures to manage, store, and traverse items or messages efficiently, highlighting strict memory management and structured data manipulation.",
       features: ["Data Structures", "Memory Management"],
+    },
+  ],
+  achievements: [
+    {
+      title: "2nd Place Winner",
+      event: "Nitro Hackathon",
+      organization: "Universitas Muhammadiyah Purwokerto",
+      location: "Purwokerto",
+      date: "May 2026",
+      description: "Creating a web app for distribution of KKN (Kuliah Kerja Nyata) students to the world of work and professionalism.",
+      image: "/achievement-nitro-hackathon.jpg",
+      badge: "2nd Place",
+      icon: "bx bx-trophy",
+    },
+    {
+      title: "Best Team Award",
+      event: "Web Designer & Creative Strategist",
+      organization: "Pakansuper",
+      location: "Bandung",
+      date: "Dec 2023",
+      description: "Selected as the best team among 9 teams in 2023 & represent the campus at bigger events.",
+      image: "/achievement-pakansuper.jpg",
+      badge: "Best Team",
+      icon: "bx bx-medal",
     },
   ],
 };
@@ -941,6 +965,7 @@ export default function Portfolio() {
 
           {/* featured projects section */}
           <motion.div
+            id="projects-section"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -970,7 +995,7 @@ export default function Portfolio() {
               </div>
 
               <motion.div
-                className="flex gap-8"
+                className="flex gap-8 pointer-events-none"
                 animate={{
                   x: [0, -7680], // Move exactly one full set (15 projects × 512px each)
                 }}
@@ -987,7 +1012,7 @@ export default function Portfolio() {
                 {[...portfolioData.projects, ...portfolioData.projects, ...portfolioData.projects, ...portfolioData.projects].map((project, index) => (
                   <motion.div
                     key={`carousel-${index}`}
-                    className="flex-shrink-0 w-[480px] bg-white/30 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/50 transition-all duration-300 flex flex-col"
+                    className="flex-shrink-0 w-[480px] bg-white/30 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-white/50 transition-all duration-300 flex flex-col pointer-events-auto"
                     whileHover={{ scale: 1.02 }}
                   >
                     {/* project image */}
@@ -1459,6 +1484,63 @@ export default function Portfolio() {
               </motion.a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* achievements section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold text-gray-800 mb-4">Achievements</h2>
+            <p className="text-lg text-gray-600">Recognition and awards from competitions and events</p>
+          </motion.div>
+
+          <div className="space-y-10">
+            {portfolioData.achievements.map((achievement, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
+                className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-0 bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100`}
+              >
+                {/* photo */}
+                <div className="w-full md:w-2/5 min-h-[280px] overflow-hidden">
+                  <img
+                    src={achievement.image}
+                    alt={achievement.title}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                {/* content */}
+                <div className="flex-1 p-8 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 bg-gray-800 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-5 w-fit">
+                    <i className={`${achievement.icon} text-base`}></i>
+                    <span>{achievement.badge}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-1">{achievement.title}</h3>
+                  <h4 className="text-xl font-semibold text-gray-600 mb-2">{achievement.event}</h4>
+                  <p className="text-sm text-gray-500 mb-5 flex items-center gap-1.5">
+                    <i className="bx bx-buildings text-base"></i>
+                    {achievement.organization}
+                    <span className="mx-1">·</span>
+                    <i className="bx bx-map text-base"></i>
+                    {achievement.location}
+                    <span className="mx-1">·</span>
+                    <i className="bx bx-calendar text-base"></i>
+                    {achievement.date}
+                  </p>
+                  <p className="text-gray-600 leading-relaxed">{achievement.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
