@@ -1310,6 +1310,63 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* achievements section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-5xl font-bold text-white mb-4">Achievements</h2>
+            <p className="text-lg text-gray-300">Recognition and awards from competitions and events</p>
+          </motion.div>
+
+          <div className="space-y-10">
+            {portfolioData.achievements.map((achievement, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.15 }}
+                className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-0 bg-white/10 rounded-2xl overflow-hidden border border-white/10`}
+              >
+                {/* photo */}
+                <div className="w-full md:w-2/5 min-h-[280px] overflow-hidden">
+                  <img
+                    src={achievement.image}
+                    alt={achievement.title}
+                    className="w-full h-full object-cover object-center"
+                  />
+                </div>
+
+                {/* content */}
+                <div className="flex-1 p-8 flex flex-col justify-center">
+                  <div className="inline-flex items-center gap-2 bg-white text-gray-900 text-sm font-medium px-4 py-1.5 rounded-full mb-5 w-fit">
+                    <i className={`${achievement.icon} text-base`}></i>
+                    <span>{achievement.badge}</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-1">{achievement.title}</h3>
+                  <h4 className="text-xl font-semibold text-gray-300 mb-2">{achievement.event}</h4>
+                  <p className="text-sm text-gray-400 mb-5 flex items-center gap-1.5">
+                    <i className="bx bx-buildings text-base"></i>
+                    {achievement.organization}
+                    <span className="mx-1">·</span>
+                    <i className="bx bx-map text-base"></i>
+                    {achievement.location}
+                    <span className="mx-1">·</span>
+                    <i className="bx bx-calendar text-base"></i>
+                    {achievement.date}
+                  </p>
+                  <p className="text-gray-300 leading-relaxed">{achievement.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* skills section - infinite scroll marquee - completely outside all containers for full width */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -1484,63 +1541,6 @@ export default function Portfolio() {
               </motion.a>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* achievements section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-5xl font-bold text-gray-800 mb-4">Achievements</h2>
-            <p className="text-lg text-gray-600">Recognition and awards from competitions and events</p>
-          </motion.div>
-
-          <div className="space-y-10">
-            {portfolioData.achievements.map((achievement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.15 }}
-                className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-0 bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100`}
-              >
-                {/* photo */}
-                <div className="w-full md:w-2/5 min-h-[280px] overflow-hidden">
-                  <img
-                    src={achievement.image}
-                    alt={achievement.title}
-                    className="w-full h-full object-cover object-center"
-                  />
-                </div>
-
-                {/* content */}
-                <div className="flex-1 p-8 flex flex-col justify-center">
-                  <div className="inline-flex items-center gap-2 bg-gray-800 text-white text-sm font-medium px-4 py-1.5 rounded-full mb-5 w-fit">
-                    <i className={`${achievement.icon} text-base`}></i>
-                    <span>{achievement.badge}</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-800 mb-1">{achievement.title}</h3>
-                  <h4 className="text-xl font-semibold text-gray-600 mb-2">{achievement.event}</h4>
-                  <p className="text-sm text-gray-500 mb-5 flex items-center gap-1.5">
-                    <i className="bx bx-buildings text-base"></i>
-                    {achievement.organization}
-                    <span className="mx-1">·</span>
-                    <i className="bx bx-map text-base"></i>
-                    {achievement.location}
-                    <span className="mx-1">·</span>
-                    <i className="bx bx-calendar text-base"></i>
-                    {achievement.date}
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">{achievement.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
