@@ -383,7 +383,7 @@ const portfolioData = {
   },
   projects: [
     {
-      title: "Sistem Akreditasi STEI ITB (PPL)",
+      title: "Sistem Akreditasi STEI ITB",
       link: "https://github.com/ArdellAghna",
       images: ["/ss-sistem_akreditasi_stei-project.png", "/ss-sistem_akreditasi_stei-project-2.png"],
       techStack: ["Next.js", "React", "TypeScript", "Express.js", "PostgreSQL", "Prisma"],
