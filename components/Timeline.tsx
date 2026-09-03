@@ -16,47 +16,47 @@ interface TimelineItemData {
 
 const timelineData: TimelineItemData[] = [
   {
+    id: "bi",
+    year: "2026",
+    period: "Jun 2026 - Aug 2026",
+    title: "Data Scientist Intern",
+    organization: "Central Bank of Indonesia",
+    description:
+      "Researched and benchmarked forecasting models to determine the best-performing approach for foreign exchange (valas) supply-demand prediction. Built an AI-powered Summarizer tool for chapters in Annual Assessment books, streamlining internal review and reporting processes using Azure AI services. Conducted User Acceptance Testing (UAT) for Bank Indonesia's Internal Data Portal application to ensure functionality and data accuracy prior to deployment.",
+    tech: ["Forecasting Models", "Azure AI Services", "UAT", "Data Analysis"],
+    type: "work",
+  },
+  {
+    id: "oskm",
+    year: "2026",
+    period: "May 2026 – Aug 2026",
+    title: "Frontend Developer",
+    organization: "OSKM ITB",
+    description:
+      "Designed and developed responsive, high-performance front-end user interfaces and interactive onboarding components for the official OSKM e-commerce platform using Next.js, TypeScript, React, and Bun. Collaborated with cross-functional UI/UX and backend teams to deliver a robust, scalable web platform for university orientation.",
+    tech: ["Next.js", "TypeScript", "React", "Bun", "UI/UX"],
+    type: "work",
+  },
+  {
     id: "purwadhika",
     year: "2026",
     period: "Oct 2025 – Jan 2026",
     title: "Data Analytics Trainee",
-    organization: "Purwadhika Digital Technology School",
+    organization: "PURWADHIKA DIGITAL TECHNOLOGY SCHOOL",
     description:
-      "Executed end-to-end data analysis workflows, including advanced data cleansing, transformation, and Exploratory Data Analysis (EDA) using Python (Pandas, NumPy) and SQL. Applied inferential statistical methods including Hypothesis Testing (A/B Testing, t-test, ANOVA) and correlation analysis. Developed interactive BI dashboards using Tableau and Python visualization libraries to monitor KPIs and identify market trends. Final Exam: 85/100 | Final Project: 91.3/100.",
+      "Executed end-to-end data analysis workflows, including advanced data cleansing, transformation, and Exploratory Data Analysis (EDA) using Python (Pandas, NumPy) and SQL. Applied inferential statistical methods, including Hypothesis Testing (A/B Testing, t-test, ANOVA) and correlation analysis. Developed interactive Business Intelligence dashboards using Tableau and Python visualization libraries. Synthesized complex analytical findings into compelling Data Stories.",
     tech: ["Python", "Pandas", "NumPy", "SQL", "Tableau", "A/B Testing", "EDA", "Data Storytelling"],
     type: "work",
   },
   {
     id: "hmif-itb",
-    year: "2025",
+    year: "2024",
     period: "Sep 2024 – Present",
-    title: "Media & Information Division Staff",
-    organization: "Himpunan Mahasiswa Informatika (HMIF) ITB",
+    title: "Media & Information Division",
+    organization: "HIMPUNAN MAHASISWA INFORMATIKA (HMIF) ITB",
     description:
-      "Managing digital content strategy and community communication for ITB Informatics students. Led visual publication and documentation for major milestones including PEMILU HMIF 2025, SPARTA 2024 (Orientation), and the October Graduation 2024. Collaborated with cross-functional teams to produce high-quality multimedia assets for 1,000+ union members.",
-    tech: ["Content Strategy", "Digital Media", "Event Documentation", "Canva", "Community Management"],
-    type: "work",
-  },
-  {
-    id: "unit-golf",
-    year: "2025",
-    period: "Feb 2025 – Present",
-    title: "Internal Department Staff",
-    organization: "Unit Golf Ganesha ITB",
-    description:
-      "Coordinating internal operations and supporting member activities specifically for the Jatinangor campus division. Managing scheduling, logistics, and internal communications.",
-    tech: ["Operations Coordination", "Member Support", "Event Management"],
-    type: "work",
-  },
-  {
-    id: "arkavidia",
-    year: "2025",
-    period: "Nov 2024 – May 2025",
-    title: "Staff of Documentation",
-    organization: "ARKAVIDIA – ITB IT Festival",
-    description:
-      "Captured and managed visual data for one of Indonesia's most prestigious student-led IT competitions and festivals. Responsible for photography, visual documentation, and post-event media production across multiple event days.",
-    tech: ["Visual Documentation", "Photography", "Event Management", "Media Production"],
+      "Managing digital content strategy and community communication for ITB Informatics students. Led visual publication and documentation for major milestones: PEMILU HMIF 2025, SPARTA 2024 (Orientation), and the October Graduation 2024. Collaborated with cross-functional teams to produce high-quality multimedia assets for 1,000+ union members.",
+    tech: ["Content Strategy", "Digital Media", "Event Documentation", "Multimedia Production"],
     type: "work",
   },
   {
@@ -64,10 +64,10 @@ const timelineData: TimelineItemData[] = [
     year: "2023",
     period: "Aug 2023 – Dec 2023",
     title: "Web Designer & Creative Strategist",
-    organization: "Pakansuper Marketplace",
+    organization: "PAKANSUPER MARKETPLACE",
     description:
-      "Developed an innovative web-based marketplace for farmers and breeders, successfully selected as the only project to represent ITB at the campus fair. Oversaw all stages of project execution, strategic planning, team motivation, product design, and marketing. Spearheaded the UI/UX design and technical deployment, managing domain and hosting. Won Best Team award among 9 teams.",
-    tech: ["WordPress", "UI/UX Design", "Web Deployment", "Brand Identity", "Team Leadership", "Go-to-Market"],
+      "Developed an innovative web-based marketplace for farmers and breeders, successfully selected as the only project to represent ITB at the campus fair. Oversaw all stages of project execution, strategic planning, team motivation, product design, and marketing. Spearheaded the UI/UX design and technical deployment of a digital marketplace, managing domain and hosting. Conceptualized the platform’s brand identity and created all visual marketing assets.",
+    tech: ["UI/UX Design", "Web Deployment", "Brand Identity", "Team Leadership", "Strategic Planning"],
     type: "work",
   },
 ];
