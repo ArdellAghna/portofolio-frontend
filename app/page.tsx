@@ -26,8 +26,8 @@ const portfolioData = {
       "Student of Computer Science at ITB with a deep passion for solving complex problems through Data Analytics, Artificial Intelligence, and Software Engineering. Experienced in data analysis, machine learning, and full-stack development.",
     img: "/profile.jpg",
     stats: [
-      { label: "Experience", value: "2+ Years", icon: "bx bx-briefcase" },
-      { label: "Projects", value: "9+", icon: "bx bx-code-alt" },
+      { label: "Experience", value: "3+ Years", icon: "bx bx-briefcase" },
+      { label: "Projects", value: "11+", icon: "bx bx-code-alt" },
       { label: "Certifications", value: "2+", icon: "bx bx-award" },
       { label: "Published Works", value: "3+", icon: "bx bx-book" },
     ],
@@ -70,7 +70,7 @@ const portfolioData = {
         icon: "bx bx-book",
       },
       { label: "Major", value: "Computer Science", icon: "bx bx-code-alt" },
-      { label: "Semester", value: "6", icon: "bx bx-calendar" },
+      { label: "Semester", value: "7", icon: "bx bx-calendar" },
       {
         label: "Focus",
         value: "Data Analytics & Frontend Developer",
@@ -94,6 +94,20 @@ const portfolioData = {
     },
     experience: [
       {
+        title: "Data Scientist Intern",
+        company: "Central Bank of Indonesia (Bank Indonesia)",
+        period: "Jun 2026 – Aug 2026",
+        description:
+          "Researched and benchmarked forecasting models for foreign exchange supply-demand prediction. Built an AI-powered Summarizer tool for Annual Assessment books using Azure AI services. Conducted UAT for Bank Indonesia's Internal Data Portal.",
+      },
+      {
+        title: "Frontend Developer",
+        company: "OSKM ITB",
+        period: "May 2026 – Aug 2026",
+        description:
+          "Designed and developed responsive front-end interfaces and interactive onboarding components for the official OSKM e-commerce platform using Next.js, TypeScript, React, and Bun.",
+      },
+      {
         title: "Data Analytics Trainee",
         company: "Purwadhika Digital Technology School",
         period: "Oct 2025 – Jan 2026",
@@ -106,13 +120,6 @@ const portfolioData = {
         period: "Sep 2024 – Present",
         description:
           "Managing digital content strategy and community communication for ITB Informatics students. Led visual publication and documentation for major events including PEMILU HMIF 2025 and SPARTA 2024.",
-      },
-      {
-        title: "Staff of Documentation",
-        company: "ARKAVIDIA – ITB IT Festival",
-        period: "Nov 2024 – May 2025",
-        description:
-          "Captured and managed visual data for one of Indonesia's most prestigious student-led IT competitions and festivals.",
       },
       {
         title: "Web Designer & Creative Strategist",
@@ -375,6 +382,22 @@ const portfolioData = {
     ],
   },
   projects: [
+    {
+      title: "Sistem Akreditasi STEI ITB (PPL)",
+      link: "https://github.com/ArdellAghna",
+      images: ["/ss-sistem_akreditasi_stei-project.png", "/ss-sistem_akreditasi_stei-project-2.png"],
+      techStack: ["Next.js", "React", "TypeScript", "Express.js", "PostgreSQL", "Prisma"],
+      description: "Developed an integrated web platform for STEI ITB to manage study program accreditation. Features centralized data sync, automated Excel/Word parsing, rich text editing, and an early warning notification system based on accreditation passing grades.",
+      features: ["Full-Stack Development", "Role-Based Access Control"],
+    },
+    {
+      title: "Aplikasi Antrean Digital – UMKM (SDG 8)",
+      link: "",
+      images: ["/ss-antrean_digital_umkm-project.png", "/ss-antrean_digital_umkm-project-2.png"],
+      techStack: ["Figma", "UI/UX Design", "Prototyping", "Usability Testing"],
+      description: "Designed a High Fidelity Prototype for a digital queue app for small businesses (UMKM). Customers can take queue numbers digitally and monitor status in real-time. Conducted usability testing with excellent results: SUS 91.4 and NPS 100.",
+      features: ["HiFi Prototype", "Usability Testing (SUS 91.4)"],
+    },
     {
       title: "US Airline Market Trends (1993–2024)",
       link: "https://github.com/ArdellAghna/Bootcamp-Data-Analytics-Purwadhika",
